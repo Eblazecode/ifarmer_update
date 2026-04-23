@@ -11,8 +11,7 @@ import {
 export default function SiteFooter() {
   const footerLinks = [
     ...navItems,
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Cookie Policy", href: "/cookie-policy" }
+    { label: "Login", href: "/admin/login" },
   ];
 
   return (
@@ -93,13 +92,17 @@ export default function SiteFooter() {
             <p>
               &copy; {new Date().getFullYear()} {businessName}. All rights reserved.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
               <Link href="/privacy-policy" className="hover:text-white">
                 Privacy Policy
               </Link>
               <Link href="/cookie-policy" className="hover:text-white">
                 Cookie Policy
               </Link>
+              <span className="text-white/55">
+                Managed by Alderwood Management
+              </span>
+              
             </div>
           </div>
         </div>

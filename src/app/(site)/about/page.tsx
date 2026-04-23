@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageHero from "@/components/page-hero";
 import Reveal from "@/components/reveal";
 import { SectionHeading } from "@/components/content-blocks";
+import { isRemoteImageSrc } from "@/lib/image-utils";
 import {
   businessName,
   certifications,
@@ -21,7 +22,7 @@ export default function AboutPage() {
     <div>
       <PageHero
         title={`About ${businessName}`}
-        description="Transforming agricultural services, product sourcing, and agribusiness support into a stronger, search-ready, and operationally useful business website."
+        description="We support farmers, agribusinesses, institutions, and commodity buyers with practical agricultural solutions, reliable sourcing, and field-focused service delivery."
       />
 
       <section className="bg-white py-20">
@@ -29,15 +30,15 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Our Story"
-              title="A stronger digital platform for a serious agribusiness"
-              description="The original website already communicated agricultural credibility. This rebuilt version preserves that foundation while adding the operational depth the business needs."
+              title="Built to support modern agribusiness"
+              description="iFarmer combines product supply, project support, and agribusiness services to help clients operate more efficiently and grow with confidence."
             />
             <div className="prose-content mt-8">
               <p>
-                {businessName} emerged from a mission to support agricultural productivity, sustainable operations, product sourcing, and programme delivery across Nigeria. The website now reflects that role more clearly by pairing the existing brand presentation with business-ready digital features.
+                {businessName} was founded to support agricultural productivity, dependable sourcing, and programme delivery across Nigeria. We work with growers, cooperatives, institutions, exporters, processors, and agribusiness operators that need practical support on the ground.
               </p>
               <p>
-                The result is not a cosmetic redesign. It is a conversion from a brochure-style frontend into a working business website with individual SEO pages, better enquiry workflows, product-specific buy request capture, and a backend that can support admin operations.
+                Our approach combines field understanding with responsive business service. From fertilizer blending and input procurement to commodity sourcing and project coordination, we focus on helping clients move from enquiry to execution with clarity and confidence.
               </p>
             </div>
           </Reveal>
@@ -51,7 +52,7 @@ export default function AboutPage() {
                 "Agricultural project management",
                 "Agri software solutions",
                 "Commodity sourcing and supply",
-                "Operational lead handling"
+                "Consultation and client support"
               ].map((item) => (
                 <div key={item} className="rounded-2xl bg-white p-4 shadow-sm">
                   <p className="font-medium text-slate-700">{item}</p>
@@ -67,7 +68,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Certifications"
             title="Certified and connected"
-            description="The original site highlighted regulatory and export-aligned credibility. Those recognisable trust signals remain and are now structured more clearly."
+            description="Our certifications and industry relationships reinforce the quality, compliance, and export-readiness expected by serious buyers and partners."
           />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {certifications.map((item, index) => (
@@ -81,6 +82,7 @@ export default function AboutPage() {
                     src={item.logo}
                     alt={item.name}
                     fill
+                    sizes="(min-width: 768px) 220px, 60vw"
                     className="object-contain"
                   />
                 </div>
@@ -98,7 +100,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Team Representation"
             title="People behind the work"
-            description="This section keeps the people-focused tone of the existing website while fitting it into the new Next.js structure."
+            description="Meet the teams supporting operations, client service, technical coordination, and knowledge development across our business."
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {team.map((member, index) => (
@@ -108,7 +110,14 @@ export default function AboutPage() {
                 className="overflow-hidden rounded-3xl bg-white shadow-lg"
               >
                 <div className="relative h-72">
-                  <Image src={member.image} alt={member.name} fill className="object-cover" />
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    unoptimized={isRemoteImageSrc(member.image)}
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-[#2D5016]">{member.name}</h3>

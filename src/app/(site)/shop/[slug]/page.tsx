@@ -5,6 +5,7 @@ import PageHero from "@/components/page-hero";
 import Reveal from "@/components/reveal";
 import { BuyRequestForm } from "@/components/forms";
 import { ProductCard, SectionHeading } from "@/components/content-blocks";
+import { isRemoteImageSrc } from "@/lib/image-utils";
 import { getProductBySlug, getProducts } from "@/lib/server-api";
 
 type Props = {
@@ -54,7 +55,14 @@ export default async function ProductDetailPage({ params }: Props) {
         <div className="container grid gap-12 lg:grid-cols-[1fr,0.9fr]">
           <Reveal className="space-y-6">
             <div className="relative h-[420px] overflow-hidden rounded-3xl shadow-soft">
-              <Image src={product.image} alt={product.name} fill className="object-cover" />
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                sizes="(min-width: 1024px) 55vw, 100vw"
+                unoptimized={isRemoteImageSrc(product.image)}
+                className="object-cover"
+              />
             </div>
             <div className="grid gap-4 md:grid-cols-3">
               <div className="rounded-2xl bg-[#F5F5DC] p-5">
@@ -107,7 +115,7 @@ export default async function ProductDetailPage({ params }: Props) {
           <div className="rounded-3xl bg-white p-8 shadow-lg">
             <h2 className="text-2xl font-bold text-[#2D5016]">Submit a buy request</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              This request is saved to the backend so the admin team can review buyer details and respond properly.
+              Share your quantity, destination, and product needs, and our team will follow up with the next commercial steps.
             </p>
             <div className="mt-6">
               <BuyRequestForm
@@ -120,7 +128,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <SectionHeading
               eyebrow="Related Products"
               title="Explore more agricultural products"
-              description="The new store structure supports richer product discovery and lead capture without changing the brand feel of the website."
+              description="Discover other agricultural products available for bulk sourcing and commercial supply."
             />
             {related.length ? (
               <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -131,7 +139,7 @@ export default async function ProductDetailPage({ params }: Props) {
             ) : (
               <div className="mt-8 rounded-3xl bg-white p-8 shadow-sm">
                 <p className="text-sm leading-7 text-slate-600">
-                  Additional live products will appear here as more catalog entries are published from the admin area.
+                  Additional products will appear here as more catalogue items are added.
                 </p>
               </div>
             )}

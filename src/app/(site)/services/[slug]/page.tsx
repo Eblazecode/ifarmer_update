@@ -7,6 +7,7 @@ import Reveal from "@/components/reveal";
 import { SectionHeading, ServiceCard } from "@/components/content-blocks";
 import { AppointmentForm } from "@/components/forms";
 import { services as fallbackServices } from "@/data/site-content";
+import { isRemoteImageSrc } from "@/lib/image-utils";
 import { getServiceBySlug } from "@/lib/server-api";
 
 type Props = {
@@ -54,7 +55,14 @@ export default async function ServiceDetailPage({ params }: Props) {
         <div className="container grid gap-12 lg:grid-cols-[1fr,0.9fr]">
           <Reveal className="space-y-6">
             <div className="relative h-[420px] overflow-hidden rounded-3xl shadow-soft">
-              <Image src={service.heroImage} alt={service.title} fill className="object-cover" />
+              <Image
+                src={service.heroImage}
+                alt={service.title}
+                fill
+                sizes="(min-width: 1024px) 55vw, 100vw"
+                unoptimized={isRemoteImageSrc(service.heroImage)}
+                className="object-cover"
+              />
             </div>
             <div className="grid gap-4 md:grid-cols-3">
               {service.highlights.map((item) => (
@@ -96,7 +104,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           <div className="rounded-3xl bg-white p-8 shadow-lg">
             <h2 className="text-2xl font-bold text-[#2D5016]">Request an appointment</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              This form now submits to the backend so your admin can review appointments later.
+              Book a consultation to discuss your needs, timelines, and the right service approach for your project.
             </p>
             <div className="mt-6">
               <AppointmentForm defaultService={service.title} />
@@ -106,7 +114,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             <SectionHeading
               eyebrow="Related Services"
               title="Explore other service areas"
-              description="The service architecture now supports individual SEO pages, making each capability easier to discover and manage."
+              description="See other ways iFarmer supports farms, institutions, and agribusiness operations."
             />
             <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {related.map((item, index) => (

@@ -15,7 +15,7 @@ export default function ServicesPage() {
     <div>
       <PageHero
         title="Our Services"
-        description="Each service now has its own dedicated SEO-focused page, while the overall design remains familiar to the existing website experience."
+        description="We deliver practical agricultural solutions across fertilizer blending, input procurement, project execution, and digital support for agribusiness operations."
       >
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <Link
@@ -38,7 +38,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Service Portfolio"
             title="Solutions built for field needs and business outcomes"
-            description="The original tab-based service presentation has been improved into fully indexable service pages with richer detail."
+            description="Our services are designed to help farmers, institutions, and agribusinesses achieve stronger field performance, smoother operations, and dependable supply support."
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {services.map((service, index) => (

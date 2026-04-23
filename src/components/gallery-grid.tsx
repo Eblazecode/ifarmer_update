@@ -58,6 +58,7 @@ export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
                   src={image.src}
                   alt={image.alt}
                   fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover transition duration-700 group-hover:scale-110"
                 />
               </div>
@@ -89,7 +90,13 @@ export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
               <X className="h-5 w-5" />
             </button>
             <div className="relative h-[70vh] w-[min(90vw,1000px)]">
-              <Image src={selected.src} alt={selected.alt} fill className="object-contain" />
+              <Image
+                src={selected.src}
+                alt={selected.alt}
+                fill
+                sizes="(min-width: 1024px) 1000px, 90vw"
+                className="object-contain"
+              />
             </div>
           </div>
         </div>

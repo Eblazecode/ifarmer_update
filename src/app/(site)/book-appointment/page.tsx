@@ -14,14 +14,14 @@ export default function BookAppointmentPage() {
     <div>
       <PageHero
         title="Book an Appointment"
-        description="A dedicated booking page now gives visitors a cleaner route into consultations, demos, and service discussions."
+        description="Schedule a meeting with our team for service consultations, product sourcing discussions, project planning, or agribusiness support."
       />
       <section className="bg-[#F5F5DC] py-20">
         <div className="container grid gap-10 lg:grid-cols-[0.9fr,1.1fr]">
           <div className="rounded-3xl bg-white p-8 shadow-lg">
             <h2 className="text-2xl font-bold text-[#2D5016]">Request your appointment</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              Appointment requests are stored on the backend so admins can review and respond.
+              Choose a convenient date and share your needs so we can prepare for the discussion.
             </p>
             <div className="mt-8">
               <AppointmentForm />

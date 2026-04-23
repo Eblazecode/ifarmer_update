@@ -44,7 +44,7 @@ export default async function HomePage() {
           <SectionHeading
             eyebrow="Welcome"
             title={`Welcome to ${businessName}`}
-            description="We preserve the visual identity of the current website while expanding it into a stronger business platform with real services, product pages, lead capture, and administrative control."
+            description="We provide fertilizer blending, input supply, agricultural project support, agri software solutions, and bulk commodity sourcing for farmers, institutions, and commercial buyers."
           />
 
           <div className="mt-14 grid gap-8 lg:grid-cols-[1.3fr,0.7fr]">
@@ -108,8 +108,8 @@ export default async function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Featured Products"
-            title="Bulk agricultural products for serious buyers"
-            description="The new store experience creates product-specific pages, better SEO, and structured buy requests that your admin team can review."
+            title="Bulk agricultural products for trade and processing"
+            description="Source ginger, soy beans, sesame seeds, cashew, tigernut, hibiscus, cocoa, and other commodities backed by responsive sourcing support."
           />
           {liveProducts.length ? (
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -124,10 +124,10 @@ export default async function HomePage() {
           ) : (
             <div className="mt-12 rounded-3xl bg-white p-10 text-center shadow-soft">
               <h3 className="text-2xl font-bold text-[#2D5016]">
-                Product listings will appear here from the live catalog
+                Product availability is currently being updated
               </h3>
               <p className="mt-4 text-sm leading-7 text-slate-600">
-                This section now reads directly from the backend product API, so only published catalog items are shown.
+                Contact our team for current availability, bulk volumes, and supply timelines.
               </p>
             </div>
           )}
@@ -148,8 +148,8 @@ export default async function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Knowledge Center"
-            title="Publishable content with SEO value"
-            description="The new site structure supports article detail pages, admin publishing, and search-focused content expansion."
+            title="Practical agricultural insights for better decisions"
+            description="Explore articles on crop nutrition, farm operations, commodity sourcing, and agribusiness best practices."
           />
           {livePosts.length ? (
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -160,10 +160,10 @@ export default async function HomePage() {
           ) : (
             <div className="mt-12 rounded-3xl bg-[#F8FAF5] p-10 text-center shadow-soft">
               <h3 className="text-2xl font-bold text-[#2D5016]">
-                New articles will appear here from the publishing API
+                Fresh articles will be published soon
               </h3>
               <p className="mt-4 text-sm leading-7 text-slate-600">
-                The home page now reads live blog content from the backend, so only current published posts are featured.
+                Check back for updates from our team on field operations, crop management, and agribusiness trends.
               </p>
             </div>
           )}

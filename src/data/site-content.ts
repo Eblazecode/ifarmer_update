@@ -326,7 +326,7 @@ export const products: Product[] = [
     details: [
       "Our tigernut product page supports commercial buyers looking for sourcing conversations that can move toward fulfilment.",
       "We position enquiries around buyer detail, quantity expectation, and destination information.",
-      "This helps the admin team respond with clearer commercial follow-up."
+      "This helps our team respond with clearer commercial guidance and follow-up."
     ],
     image: "/assets/gallery/tiggernut.jpeg",
     gallery: ["/assets/gallery/tiggernut.jpeg", "/assets/gallery/gallery16.jpg"],
@@ -373,7 +373,7 @@ export const products: Product[] = [
       "Commercial cocoa supply positioned for trade, processing, and export channels.",
     details: [
       "Our cocoa sourcing workflow is designed for agribusiness buyers that need a credible conversation path from enquiry to commercial review.",
-      "The product page supports lead capture with the buyer detail needed for follow-up.",
+      "We gather the quantity, quality preference, and destination details needed for a meaningful response.",
       "This improves commercial handling compared with a generic contact-only workflow."
     ],
     image: "/assets/gallery/cocoa.jpg",
@@ -546,7 +546,7 @@ export const testimonials: Testimonial[] = [
     role: "Vegetable Farmer, Imo",
     image: "/assets/testimonials/user3.jpg",
     text:
-      "The website and service experience now reflect a serious agribusiness partner, not just a supplier."
+      "iFarmer stands out as a dependable agribusiness partner that understands both supply and field realities."
   }
 ];
 

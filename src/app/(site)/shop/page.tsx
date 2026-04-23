@@ -17,14 +17,14 @@ export default async function ShopPage() {
     <div>
       <PageHero
         title="Product Store"
-        description="The new shop page introduces discoverable product SEO pages and a structured buy request workflow for serious buyers."
+        description="Browse bulk agricultural products sourced for processors, exporters, distributors, and other serious commercial buyers."
       />
       <section className="bg-[#F5F5DC] py-20">
         <div className="container">
           <SectionHeading
             eyebrow="Available Products"
-            title="Products presented like a real commercial website"
-            description="Each product now has its own page, commercial summary, and buy request form that saves buyer details for admin review."
+            title="Bulk products for trade, processing, and export"
+            description="Explore commodity pages for ginger, soy beans, sesame seeds, cashew, tigernut, hibiscus, cocoa, and more, then send your supply request to our team."
           />
           {liveProducts.length ? (
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -39,10 +39,10 @@ export default async function ShopPage() {
           ) : (
             <div className="mt-12 rounded-3xl bg-white p-10 text-center shadow-soft">
               <h3 className="text-2xl font-bold text-[#2D5016]">
-                No live products are available right now
+                Product availability is being updated
               </h3>
               <p className="mt-4 text-sm leading-7 text-slate-600">
-                The shop now reads directly from the backend product API, so published catalog items will appear here automatically.
+                Contact our team for current stock position, order quantities, and sourcing timelines.
               </p>
             </div>
           )}

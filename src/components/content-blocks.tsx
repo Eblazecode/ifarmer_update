@@ -6,6 +6,7 @@ import { ArrowRight, Calendar, Check, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
 import Reveal from "@/components/reveal";
 import { contactInfo } from "@/data/site-content";
+import { isRemoteImageSrc } from "@/lib/image-utils";
 import type { BlogPost, Product, Service, SiteStat, Testimonial } from "@/types";
 
 export function SectionHeading({
@@ -41,6 +42,8 @@ export function ServiceCard({ service, delay = 0 }: { service: Service; delay?: 
             src={service.image}
             alt={service.title}
             fill
+            sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+            unoptimized={isRemoteImageSrc(service.image)}
             className="object-cover transition duration-700 group-hover:scale-110"
           />
         </div>
@@ -72,7 +75,14 @@ export function ProductCard({ product, delay = 0 }: { product: Product; delay?: 
     <Reveal delay={delay}>
       <article className="overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
         <div className="relative h-56">
-          <Image src={product.image} alt={product.name} fill className="object-cover" />
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+            unoptimized={isRemoteImageSrc(product.image)}
+            className="object-cover"
+          />
         </div>
         <div className="p-6">
           <div className="flex items-center justify-between gap-4">
@@ -113,6 +123,8 @@ export function BlogCard({ post, delay = 0 }: { post: BlogPost; delay?: number }
             src={post.coverImage}
             alt={post.title}
             fill
+            sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+            unoptimized={isRemoteImageSrc(post.coverImage)}
             className="object-cover transition duration-700 group-hover:scale-105"
           />
         </div>
@@ -165,7 +177,7 @@ export function TestimonialSlider({ testimonials }: { testimonials: Testimonial[
         <SectionHeading
           eyebrow="Client Confidence"
           title="What Our Clients Say"
-          description="Built to feel like a serious business website, backed by the same agricultural focus that shaped the original iFarmer experience."
+          description="Our clients value the responsiveness, product quality, field insight, and business support we bring to agricultural operations and sourcing partnerships."
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {testimonials.map((item, index) => (
@@ -173,7 +185,13 @@ export function TestimonialSlider({ testimonials }: { testimonials: Testimonial[
               <article className="rounded-2xl bg-white p-8 shadow-lg">
                 <div className="flex items-center gap-4">
                   <div className="relative h-16 w-16 overflow-hidden rounded-full border-4 border-[#7CB342]">
-                    <Image src={item.image} alt={item.name} fill className="object-cover" />
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      sizes="64px"
+                      className="object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-[#2D5016]">{item.name}</h3>
@@ -242,7 +260,13 @@ export function AnimatedTrustStrip({ items }: { items: { name: string; logo: str
               className="flex items-center justify-center rounded-2xl border bg-[#F8FAF5] px-6 py-5"
             >
               <div className="relative h-16 w-full">
-                <Image src={item.logo} alt={item.name} fill className="object-contain" />
+                <Image
+                  src={item.logo}
+                  alt={item.name}
+                  fill
+                  sizes="(min-width: 768px) 220px, 60vw"
+                  className="object-contain"
+                />
               </div>
             </div>
           ))}

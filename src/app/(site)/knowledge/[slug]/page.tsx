@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/page-hero";
 import { BlogCard, SectionHeading } from "@/components/content-blocks";
+import { isRemoteImageSrc } from "@/lib/image-utils";
 import { formatDate } from "@/lib/utils";
 import { getBlogBySlug, getBlogs } from "@/lib/server-api";
 
@@ -51,7 +52,14 @@ export default async function BlogDetailPage({ params }: Props) {
         <div className="container grid gap-12 lg:grid-cols-[1fr,0.8fr]">
           <article className="space-y-8">
             <div className="relative h-[420px] overflow-hidden rounded-3xl shadow-soft">
-              <Image src={post.coverImage} alt={post.title} fill className="object-cover" />
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                fill
+                sizes="(min-width: 1024px) 66vw, 100vw"
+                unoptimized={isRemoteImageSrc(post.coverImage)}
+                className="object-cover"
+              />
             </div>
             <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
               <span className="rounded-full bg-[#EAF7E6] px-3 py-1 font-semibold text-[#2D5016]">
@@ -80,7 +88,7 @@ export default async function BlogDetailPage({ params }: Props) {
             <SectionHeading
               eyebrow="Related Articles"
               title="Continue reading"
-              description="The new knowledge structure supports real article depth instead of card-only content."
+              description="Explore more practical guidance from our knowledge center."
             />
             {related.length ? (
               <div className="mt-8 space-y-6">
@@ -91,7 +99,7 @@ export default async function BlogDetailPage({ params }: Props) {
             ) : (
               <div className="mt-8 rounded-3xl bg-[#F8FAF5] p-8">
                 <p className="text-sm leading-7 text-slate-600">
-                  More live articles will appear here as new posts are published from the admin dashboard.
+                  More articles will appear here as our knowledge center continues to grow.
                 </p>
               </div>
             )}

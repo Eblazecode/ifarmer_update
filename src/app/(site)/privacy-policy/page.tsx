@@ -42,12 +42,12 @@ export default function PrivacyPolicyPage() {
               <li>To respond to enquiries and provide requested information, quotes, or support.</li>
               <li>To review appointments, callbacks, and product requests submitted through the website.</li>
               <li>To improve website usability, performance, and business communication workflows.</li>
-              <li>To maintain internal administrative records related to legitimate business enquiries.</li>
+              <li>To maintain business records related to legitimate service and product enquiries.</li>
             </ul>
 
             <h2>How We Store and Protect Information</h2>
             <p>
-              Information submitted through this website is stored in our backend systems and administrative tools so our team can review and respond appropriately. We take reasonable operational and technical measures to protect submitted information against unauthorized access, misuse, or loss.
+              Information submitted through this website is handled through secure internal business systems so our team can review and respond appropriately. We take reasonable operational and technical measures to protect submitted information against unauthorized access, misuse, or loss.
             </p>
 
             <h2>Sharing of Information</h2>
