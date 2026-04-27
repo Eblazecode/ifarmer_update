@@ -182,6 +182,41 @@ export const services: Service[] = [
       "Agricultural project management services for government programmes, commercial farms, and agribusiness projects.",
     cta: "Book a Consultation"
   },
+    {
+    title: "Agro Product Exporting",
+    slug: "agro-product-exporting",
+    summary:
+      "Export-focused sourcing and fulfilment support for Nigerian agricultural commodities.",
+    description:
+      "We support buyers and partners with structured agro product exporting services from sourcing to commercial coordination.",
+    longDescription: [
+      "iFarmer Agricultural Products Services Limited helps commercial buyers access Nigerian agro products for export-oriented demand.",
+      "The service covers commodity sourcing support, buyer requirement handling, quality conversations, logistics coordination, and export-readiness planning.",
+      "It is designed for processors, commodity traders, international buyers, and institutions that need clearer procurement and fulfilment support."
+    ],
+    image:
+      "https://res.cloudinary.com/dkx8fx96z/image/upload/v1777270296/yly5d9dzeelrnlq9xdwr.png",
+    heroImage:
+      "https://res.cloudinary.com/dkx8fx96z/image/upload/v1777270296/yly5d9dzeelrnlq9xdwr.png",
+    features: [
+      "Export-ready commodity sourcing support",
+      "Buyer specification and volume coordination",
+      "Quality and packaging requirement handling",
+      "Documentation and fulfilment coordination",
+      "Local aggregation support",
+      "Commercial follow-up for international buyers"
+    ],
+    highlights: [
+      { label: "Focus", value: "Export Supply" },
+      { label: "Products", value: "Agro Commodities" },
+      { label: "Support", value: "Sourcing to Fulfilment" }
+    ],
+    seoTitle:
+      "Agro Product Exporting | iFarmer Agricultural Products Services Limited",
+    seoDescription:
+      "Agro product exporting services in Nigeria for commodity buyers, processors, traders, and international procurement partners.",
+    cta: "Request Export Support"
+  },
   {
     title: "Agri Software Solutions",
     slug: "agri-software-solutions",
