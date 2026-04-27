@@ -559,6 +559,7 @@ export const testimonials: Testimonial[] = [
     name: "Chinedu Okeke",
     role: "Cassava Farmer, Enugu",
     image: "/assets/testimonials/user1.webp",
+    date: "2026-03-18",
     text:
       "The custom fertilizer support from iFarmer Agricultural Products Services Limited improved our confidence in field planning and product consistency."
   },
@@ -566,6 +567,7 @@ export const testimonials: Testimonial[] = [
     name: "Aminat Bello",
     role: "Rice Farmer, Kebbi",
     image: "/assets/testimonials/user4.jpg",
+    date: "2026-02-27",
     text:
       "Their team combines product supply with real business support. That made it easier for us to plan, buy, and follow through."
   },
@@ -573,6 +575,7 @@ export const testimonials: Testimonial[] = [
     name: "Yakubu Ibrahim",
     role: "Maize Farmer, Kaduna",
     image: "/assets/testimonials/user2.webp",
+    date: "2026-01-14",
     text:
       "We value the responsiveness, quality discussions, and practical guidance that come with their agricultural services."
   },
@@ -580,8 +583,41 @@ export const testimonials: Testimonial[] = [
     name: "Ben Umeh",
     role: "Vegetable Farmer, Imo",
     image: "/assets/testimonials/user3.jpg",
+    date: "2025-12-09",
     text:
       "iFarmer stands out as a dependable agribusiness partner that understands both supply and field realities."
+  },
+  {
+    name: "Ngozi Eze",
+    role: "Soybean Cooperative Buyer, Benue",
+    image: "/assets/testimonials/user5.jpg",
+    date: "2025-11-21",
+    text:
+      "Their supply follow-up helped our cooperative manage bulk soybean sourcing with fewer delays and clearer quality expectations."
+  },
+  {
+    name: "Musa Abdullahi",
+    role: "Cocoa Aggregator, Ondo",
+    image: "/assets/testimonials/user6.jpg",
+    date: "2025-10-16",
+    text:
+      "iFarmer understands commodity buyers. The team communicates well, confirms requirements early, and keeps fulfilment discussions practical."
+  },
+  {
+    name: "Hadiza Usman",
+    role: "Hibiscus Trader, Kano",
+    image: "/assets/testimonials/user7.jpg",
+    date: "2025-09-28",
+    text:
+      "We needed reliable sourcing guidance for hibiscus orders, and their support made the process more organised from enquiry to delivery planning."
+  },
+  {
+    name: "Emeka Nwosu",
+    role: "Cashew Farmer, Kogi",
+    image: "/assets/testimonials/user8.jpg",
+    date: "2025-08-12",
+    text:
+      "The field advice and product conversations are straightforward. It feels like working with a partner that knows farm operations."
   }
 ];
 

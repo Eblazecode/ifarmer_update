@@ -67,6 +67,7 @@ export type Testimonial = {
   name: string;
   role: string;
   image: string;
+  date: string;
   text: string;
 };
 

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Calendar, Check, PhoneCall } from "lucide-react";
+import { ArrowRight, Calendar, Check, PhoneCall, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import Reveal from "@/components/reveal";
 import { contactInfo } from "@/data/site-content";
@@ -170,6 +170,29 @@ export function StatsGrid({ stats }: { stats: SiteStat[] }) {
   );
 }
 
+function GoogleReviewIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 18 18" className="h-5 w-5">
+      <path
+        fill="#4285F4"
+        d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.91c1.7-1.57 2.69-3.87 2.69-6.62Z"
+      />
+      <path
+        fill="#34A853"
+        d="M9 18c2.43 0 4.47-.81 5.96-2.18l-2.91-2.26c-.81.54-1.84.86-3.05.86a5.37 5.37 0 0 1-5.05-3.71H.94v2.33A9 9 0 0 0 9 18Z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M3.95 10.71a5.4 5.4 0 0 1 0-3.42V4.96H.94a9 9 0 0 0 0 8.08l3.01-2.33Z"
+      />
+      <path
+        fill="#EA4335"
+        d="M9 3.58c1.32 0 2.51.45 3.44 1.35l2.58-2.58A8.66 8.66 0 0 0 9 0 9 9 0 0 0 .94 4.96l3.01 2.33A5.37 5.37 0 0 1 9 3.58Z"
+      />
+    </svg>
+  );
+}
+
 export function TestimonialSlider({ testimonials }: { testimonials: Testimonial[] }) {
   return (
     <section className="bg-[#F5F5DC] py-20">
@@ -182,23 +205,46 @@ export function TestimonialSlider({ testimonials }: { testimonials: Testimonial[
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {testimonials.map((item, index) => (
             <Reveal key={item.name} delay={index * 0.08}>
-              <article className="rounded-2xl bg-white p-8 shadow-lg">
-                <div className="flex items-center gap-4">
-                  <div className="relative h-16 w-16 overflow-hidden rounded-full border-4 border-[#7CB342]">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      sizes="64px"
-                      className="object-cover"
-                    />
+              <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-[0_8px_24px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_14px_34px_rgba(15,23,42,0.12)]">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex min-w-0 items-center gap-4">
+                    <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        sizes="56px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="truncate text-base font-semibold text-slate-900">
+                        {item.name}
+                      </h3>
+                      <p className="truncate text-sm text-slate-500">{item.role}</p>
+                      <p className="mt-1 text-xs text-slate-400">
+                        {new Date(item.date).toLocaleDateString("en-NG", {
+                          dateStyle: "medium"
+                        })}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#2D5016]">{item.name}</h3>
-                    <p className="text-sm text-slate-500">{item.role}</p>
+                  <div
+                    aria-label="Google-style review"
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-lg font-bold shadow-sm"
+                  >
+                    <GoogleReviewIcon />
                   </div>
                 </div>
-                <p className="mt-6 text-base leading-8 text-slate-700">
+                <div className="mt-5 flex items-center gap-1" aria-label="5 out of 5 stars">
+                  {Array.from({ length: 5 }).map((_, starIndex) => (
+                    <Star
+                      key={starIndex}
+                      className="h-4 w-4 fill-[#FABB05] text-[#FABB05]"
+                    />
+                  ))}
+                </div>
+                <p className="mt-4 text-sm leading-7 text-slate-700">
                   &ldquo;{item.text}&rdquo;
                 </p>
               </article>
