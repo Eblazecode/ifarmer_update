@@ -669,6 +669,90 @@ export const galleryImages: GalleryImage[] = [
     alt: "Export commodity",
     caption: "Commodity and export-readiness support",
     tag: "products"
+  },
+  {
+    src: "/assets/gallery/gallery9.jpeg",
+    alt: "Bagged agricultural inputs",
+    caption: "Bulk agricultural input stock prepared for distribution",
+    tag: "products"
+  },
+  {
+    src: "/assets/gallery/gallery10.jpg",
+    alt: "Farmer training session",
+    caption: "Farmer engagement and training session in Ondo State",
+    tag: "people"
+  },
+  {
+    src: "/assets/gallery/gallery11.jpg",
+    alt: "Borno farmer association visit",
+    caption: "Stakeholder engagement with farmer leaders in Borno State",
+    tag: "people"
+  },
+  {
+    src: "/assets/gallery/gallery12.jpg",
+    alt: "Yobe farmer association meeting",
+    caption: "Project coordination meeting with AFAN Yobe State chapter",
+    tag: "people"
+  },
+  {
+    src: "/assets/gallery/gallery13.jpg",
+    alt: "Yobe farmer group photograph",
+    caption: "Farmer association engagement and documentation in Yobe State",
+    tag: "people"
+  },
+  {
+    src: "/assets/gallery/gallery14.jpg",
+    alt: "Kano farmer stakeholder meeting",
+    caption: "Agricultural stakeholder coordination meeting in Kano State",
+    tag: "people"
+  },
+  {
+    src: "/assets/gallery/gallery15.jpg",
+    alt: "Abia farmer association meeting",
+    caption: "Farmer association programme engagement in Abia State",
+    tag: "people"
+  },
+  {
+    src: "/assets/gallery/gallery16.jpg",
+    alt: "Anambra farmer training hall",
+    caption: "Farmer mobilisation and engagement session in Anambra State",
+    tag: "people"
+  },
+  {
+    src: "/assets/gallery/gallery17.jpg",
+    alt: "Ogadep supply warehouse stock",
+    caption: "Warehouse stock arranged for recent Ogadep supply",
+    tag: "operations"
+  },
+  {
+    src: "/assets/gallery/gallery18.jpeg",
+    alt: "Ogadep supply crates",
+    caption: "Plastic crates stacked for recent Ogadep supply",
+    tag: "operations"
+  },
+  {
+    src: "/assets/gallery/gallery19.jpeg",
+    alt: "Ogadep supply inventory",
+    caption: "Crate inventory staged for Ogadep delivery",
+    tag: "operations"
+  },
+  {
+    src: "/assets/gallery/gallery20.jpeg",
+    alt: "Ogadep supply handling",
+    caption: "Field handling of crates for recent Ogadep supply",
+    tag: "operations"
+  },
+  {
+    src: "/assets/gallery/gallery21.jpeg",
+    alt: "Ogadep supply loading area",
+    caption: "Crates positioned for loading during Ogadep supply",
+    tag: "operations"
+  },
+  {
+    src: "/assets/gallery/gallery22.jpeg",
+    alt: "Ogadep supply truck loading",
+    caption: "Loading crates onto truck for recent Ogadep supply",
+    tag: "operations"
   }
 ];
 
