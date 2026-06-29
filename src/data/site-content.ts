@@ -16,7 +16,7 @@ export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://ifarmerslimited.com";
 
 export const apiUrl =
-  process.env.NEXT_PUBLIC_API_URL || "https://ifarmer-backend-mfau.onrender.com/api";
+  process.env.NEXT_PUBLIC_API_URL || "https://ifarmer-backend.vercel.app/api";
 
 export const contactInfo = {
   phoneDisplay: "+234 904 605 0154",
