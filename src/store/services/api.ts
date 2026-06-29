@@ -17,7 +17,7 @@ import type {
   Service
 } from "@/types";
 
-const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://ifarmer-backend-mfau.onrender.com/api";
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://ifarmer-backend.vercel.app/api";
 
 export const api = createApi({
   reducerPath: "api",
